@@ -1,0 +1,80 @@
+.header {
+    width: 100%;
+    padding: 20px 0;
+    padding-top: 16px;
+
+    @include laptop-big {
+        padding: 15px 0;
+    }
+
+    @include tablet {
+        padding: 10px 0;
+    }
+
+    @include phone-big {
+        padding: 12px 0 16px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    &__item {
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+    &__item-main {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+.preheader {
+
+    padding: 16px 0;
+    padding-top: 0;
+    margin-bottom: 20px;
+
+    @include phone-big {
+        padding-bottom: 12px;
+        margin-bottom: 16px; 
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include phone-big {
+            justify-content: flex-start;
+            column-gap: 8px;
+        }
+    }
+
+    &__col {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+
+        @include phone-big {
+            column-gap: 8px;
+        }
+
+        &:nth-child(2) {
+            @include phone-big {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    .btn_weak {
+        @include phone-big {
+            flex-grow: 1;
+        }
+    }
+}

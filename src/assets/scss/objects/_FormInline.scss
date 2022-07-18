@@ -1,0 +1,125 @@
+.form-inline {
+    border-radius: 16px;
+    padding: 56px 56px 60px;
+
+    background: #FFFFFF;
+
+    @include phone-big {
+        padding: 24px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @include tablet {
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 135%;
+        color: #001B20;
+
+        @include laptop-big {
+            font-size: 33px;
+        }
+
+        @include phone-big {
+            margin-bottom: 24px;
+            font-size: 32px;
+        }
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 135%;
+        color: #001B20;
+
+        @include phone-big {
+            font-size: 14px;
+        }
+
+        br {
+            @include phone-big {
+                display: none
+            }
+        }
+    }
+
+    &__info-body {
+        max-width: 520px;
+        margin-bottom: 195px;
+
+        @include tablet {
+            margin-bottom: 40px;
+        }
+
+        @include phone-big {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__security {
+        display: flex;
+        align-items: flex-start;
+        
+        max-width: 460px;
+
+        @include tablet {
+            margin-top: 40px;
+        }
+    }
+
+    &__security-img {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    &__security-text {
+        flex-grow: 1;
+
+        padding-left: 10px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 135%;
+        color: #001B20;
+
+
+        @include phone-big {
+            font-size: 12px;
+        }
+    }
+
+    &__form-wrapper {
+        
+
+    }
+
+    &__form {
+        margin-left: auto;
+        max-width: 465px;
+
+        @include tablet {
+            margin: 0;
+            margin-right: auto;
+        }
+    }
+
+    &__submit {
+        @include phone-big {
+            width: 100%;
+            font-size: 14px;
+            padding: 16px 32px;
+        }
+    }
+}

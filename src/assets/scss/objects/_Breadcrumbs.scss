@@ -1,0 +1,28 @@
+.breadcrumbs {
+
+    padding-top: 15px;
+
+    @include phone-big {
+        padding-top: 20px;
+    }
+
+    &__current {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: calc(16/14);
+        color: #5A5A5A;
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: calc(16/14);
+        color: var(--c-1);
+    }
+
+    &__hr {
+        padding: 0 12px;
+    }
+}

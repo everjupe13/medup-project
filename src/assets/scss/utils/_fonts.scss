@@ -1,0 +1,96 @@
+// Modern format (only woff2 and woff)
+// Only woff2 and woff
+@mixin font($family, $filePath, $weight: normal, $style: normal) {
+
+    @font-face {
+
+        font-family: $family;
+        src: 
+            url("#{$filePath}.ttf") format("truetype"),
+            url("#{$filePath}.woff") format("woff"), // Prety modern browsers
+            url("#{$filePath}.woff2") format("woff2");
+
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+
+    }
+
+}
+
+// All formats include
+// @mixin font($family, $filePath, $weight: normal, $style: normal) {
+
+//     @font-face {
+
+//         font-family: $family;
+//         src: url("#{$filePath}.eot"); // IE9 Compact Modes
+//         src: 
+//             url("#{$filePath}.woff") format("woff"), // Prety modern browsers
+//             url("#{$filePath}.woff2") format("woff2"),
+
+//             // Use for maximum compatibility
+//             url("#{$filePath}.ttf") format("truetype"), // Safari, Android, iOS
+//             url("#{$filePath}.svg") format("svg"), // Legacy iOS
+//             url("#{$filePath}.eot?#iefix") format("embedded-opentype"); // IE6-IE8
+
+//         font-weight: $weight;
+//         font-style: $style;
+//         font-display: swap;
+
+//     }
+
+// }
+
+// woff2, woff, ttf, eot
+// @mixin font($family, $filePath, $weight: normal, $style: normal) {
+
+//     @font-face {
+
+//         font-family: $family;
+//         src: url("#{$filePath}.eot"); // IE9 Compact Modes
+//         src: 
+//             url("#{$filePath}.woff") format("woff"), // Prety modern browsers
+//             url("#{$filePath}.woff2") format("woff2"),
+
+//             // Use for maximum compatibility
+//             url("#{$filePath}.ttf") format("truetype"), // Safari, Android, iOS
+//             url("#{$filePath}.eot?#iefix") format("embedded-opentype"); // IE6-IE8
+
+//         font-weight: $weight;
+//         font-style: $style;
+//         font-display: swap;
+
+//     }
+
+// }
+
+
+// @mixin font($family, $filePath, $weight: normal, $style: normal) {
+
+//     @font-face {
+
+//         font-family: $family;
+//         src: 
+//             // url("#{$filePath}.woff") format("woff"),
+//             // url("#{$filePath}.woff2") format("woff2"),
+//             url("#{$filePath}.ttf") format("truetype");
+
+//         font-weight: $weight;
+//         font-style: $style;
+//         font-display: swap;
+
+//     }
+
+// }
+
+
+
+
+
+@include font('Ninito Sans', '/fonts/Nunito_Sans/NunitoSans-Regular', 400);
+@include font('Ninito Sans', '/fonts/Nunito_Sans/NunitoSans-SemiBold', 600);
+@include font('Ninito Sans', '/fonts/Nunito_Sans/NunitoSans-Bold', 700);
+
+
+

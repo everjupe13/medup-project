@@ -1,0 +1,154 @@
+.faq-drop {
+
+    &__item {
+        margin-bottom: 15px;
+        border-radius: 15px;
+
+        background: #fff;
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
+
+        --innerHeight: 0px;
+
+        -webkit-tap-highlight-color: transparent;
+
+        @include tablet {
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        &.open {
+            .faq-drop {
+                &__label {
+                    background: var(--c-2);
+
+                    transition: cubic-bezier(0.23, 1, 0.320, 1) all .3s;
+                }
+                &__title {
+                    color: #fff;
+
+                    transition: cubic-bezier(0.23, 1, 0.320, 1) all .3s;
+                }
+
+                &__icon {
+                    color: #fff;
+                    transform: rotateZ(180deg);
+
+                    transition: cubic-bezier(0.23, 1, 0.320, 1) all .3s;
+                }
+
+                &__body {
+                    height: var(--innerHeight);
+                }
+            }
+        }
+    }
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 20px 20px 20px 40px;
+
+        border-radius: 15px;
+
+        cursor: pointer;
+        user-select: none;
+
+        transition: cubic-bezier(0.23, 1, 0.320, 1) all .15s;
+        
+        @include tablet {
+            padding: 13px 20px;
+        }
+
+        @include phone-big {
+            padding: 10px 16px;
+        }
+
+        @include phone {
+            padding: 15px;
+            padding-left: 20px;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        color: #000;
+        line-height: calc(24/20);
+
+        transition: cubic-bezier(0.23, 1, 0.320, 1) all .15s;
+
+        @include laptop {
+            font-size: 16px;
+        }
+
+        @include tablet {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        @include phone-big {
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        @include phone {
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+
+    &__icon {
+        transition: all .2s;
+
+        @include phone-big {
+            width: 12px;
+        }
+
+    }
+
+    &__body {
+        height: 0;
+        overflow: hidden;
+
+        transition: cubic-bezier(0.23, 1, 0.320, 1) all .3s;
+
+        cursor: pointer;
+    }
+
+    &__text {
+        display: block;
+
+        padding: 50px 65px;
+
+        font-size: 18px;
+        font-weight: 400;
+        color: #000;
+        line-height: 1.3;
+
+        @include laptop {
+            padding: 30px 35px;
+
+            font-size: 14px;   
+        }
+        
+        @include tablet {
+            padding: 15px 30px;
+
+            font-size: 12px;
+        }
+
+        @include phone-big {
+            padding: 10px 20px 15px;
+
+            font-size: 10px;
+        }
+
+        @include phone {
+            padding: 10px 25px 50px;
+            
+            font-size: 10px;
+        }
+    }
+}

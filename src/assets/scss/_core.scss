@@ -1,0 +1,147 @@
+@charset 'UTF-8'; // set encoding to most common type
+
+
+/* SCSS utilities
+   ========================================================================== */
+
+/**
+ * 1 - mixins and scss functions
+ * 2 - variables
+ * 3 - media breakpoints/media mixins
+ */
+
+@import 'utils/media-queries';
+/* 1 */
+@import 'utils/vars';
+/* 2 */
+@import 'utils/mixins';
+/* 3 */
+
+/* Complex reset
+   ========================================================================== */
+
+/**
+ * 1 - normalize.css https://github.com/necolas/normalize.css/
+ * 2 - my custom reset file
+ */
+
+@import 'normalize.css';
+/* 1 */
+@import 'utils/custom-reset';
+/* 2 */
+
+/* Fonts
+   ========================================================================== */
+
+/**
+ * 1 - font mixins
+ */
+
+@import 'utils/fonts';
+/* 1 */
+
+/* Support
+   ========================================================================== */
+
+/**
+ * 1 - main/root/utilities tags
+ * 2 - styles for print
+ */
+@import 'utils/layouts';
+/* 1 */
+@import 'utils/print';
+/* 2 */
+
+
+
+/* Objects/blocks
+   ========================================================================== */
+
+@import 'objects/common/button';
+@import 'objects/common/link';
+@import 'objects/common/title';
+@import 'objects/common/input';
+
+
+@import 'objects/Logo';
+@import 'objects/Navbar';
+
+
+@import 'objects/Header';
+@import 'objects/DynamicHeader';
+@import 'objects/BurgerMenu';
+@import 'objects/FormInline';
+@import 'objects/Card';
+@import 'objects/CardNumber';
+@import 'objects/CardBanner';
+@import 'objects/GallerySection';
+@import 'objects/Breadcrumbs';
+
+@import 'objects/Footer';
+
+
+
+
+/* Styles
+   ========================================================================== */
+
+body {
+
+   font-family: var(--f-f-global);
+   line-height: var(--f-lh-global);
+   color: var(--f-c-global);
+
+   background: linear-gradient(149.06deg, #FBFBFB 18.83%, #F8F9FA 62.29%);
+
+   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s all;
+
+   @include laptop-big {
+      //  font-size: 14px;
+   }
+
+   @include laptop {
+      //  font-size: 14px;
+   }
+
+   @include tablet {
+      //  font-size: 12px;       
+   }
+
+   @include phone-big {
+      //  font-size: 14px;       
+   }
+}
+
+
+// minimal custom style objects
+.text-colored {
+   color: var(--c-1);
+}
+
+.input-block {
+   margin-bottom: 16px;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+
+.select-block {
+   margin-bottom: 32px;
+
+   @include phone-big {
+      margin-bottom: 16px;
+   }
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+
+.btn-block {
+   margin-bottom: 0px;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+}

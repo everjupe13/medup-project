@@ -1,0 +1,69 @@
+.header {
+    position: static;
+    top: 0;
+    z-index: 11;
+
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) padding .07s;
+
+    padding: 26px 0;
+
+    @include laptop-big {
+        padding: 15px 0;
+    }
+
+    @include tablet {
+        padding: 10px 0;
+    }
+
+    @include phone-big {
+        padding: 12px 0 16px;
+    }
+
+}
+
+.header.scrolled {
+    position: fixed;
+    top: 0;
+
+    background: #fff;
+    // box-shadow: 0 3px 6px rgba(20, 21, 27, .2);
+
+    transition:cubic-bezier(0.6, -0.28, 0.735, 0.045) padding .15s;
+
+
+    padding: 26px 0;
+
+    @include laptop-big {
+        padding: 12px 0;
+    }
+
+    @include tablet {
+        padding: 7px 0;
+    }
+
+    @include phone-big {
+        padding: 16px 0 16px;
+    }
+
+    .preheader {
+        display: none;
+    }
+}
+
+.header.hide {
+
+    padding: 20px 0;
+
+    @include laptop-big {
+        padding: 10px 0;
+    }
+
+    @include tablet {
+        padding: 5px 0;
+    }
+
+    @include phone-big {
+        padding: 12px 0 12px;
+    }
+
+}

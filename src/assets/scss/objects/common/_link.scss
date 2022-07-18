@@ -1,0 +1,31 @@
+.link {
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(20/16);
+    text-decoration-line: underline;
+    color: var(--c-1);
+
+    @include phone-big {
+        font-size: 14px;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--c-1-d)
+    }
+
+    &:active {
+        color: var(--c-1-dd);
+    }
+}
+
+
+.link-icon {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        display: block;
+    }
+}

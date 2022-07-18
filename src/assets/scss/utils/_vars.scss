@@ -1,0 +1,74 @@
+$c-1                 : #008AA4;
+$c-1-d               : #00697e;
+$c-1-dd              : #005869;
+
+$c-2                 : #FC8B2A;
+$c-2-d               : #008AA4;
+$c-2-dd              : #ac251b;
+
+$c-3                 : #C9E4E8;
+$c-3-d               : #98C2D1;
+$c-3-dd              : #62B7D8;
+$c-3-ddd             : #33C1D4;
+$c-3-dddd            : #339DCC;
+
+
+// Optional
+$c-success                  : #26de81;
+$c-danger                   : #fc5c65;
+$c-active                   : #05a1e9;
+$c-warning                  : #fed330;
+$c-disabled                 : #999999;
+
+
+
+// General project settings, so for the most high-level configuration. (global-variables, custom properties)
+$f-f-global      : 'Nunito Sans', Roboto, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$f-f-poppins     : 'Poppins', Roboto, Segoe UI, Helvetica, Arial, sans-serif;
+$f-f-default     : -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+
+$f-w-global      : 400;
+$f-s-global      : 16px;
+$f-lh-global     : calc(21/15);
+$f-c-global      : #3d3d3d;
+
+$f-c-1           : #001B20;
+
+
+:root {
+
+    // Font variables
+    --f-f-global: #{$f-f-global};
+    --f-f-gilroy: #{$f-f-poppins};
+    --f-f-default: #{$f-f-default};
+
+    --f-w-global: #{$f-w-global};
+    --f-s-global: #{$f-s-global};
+    --f-lh-global: #{$f-lh-global};
+
+    --f-c-global: #{$f-c-global};
+    --f-c-1: #{$f-c-1};
+
+
+    // Colors variables
+    --c-1: #{$c-1};
+    --c-1-d: #{$c-1-d};
+    --c-1-dd: #{$c-1-dd};
+
+    --c-2: #{$c-2};
+    --c-2-d: #{$c-2-d};
+    --c-2-dd: #{$c-2-dd};
+
+    --c-3: #{$c-3};
+    --c-3-d: #{$c-3-d};
+    --c-3-dd: #{$c-3-dd};
+    --c-3-ddd: #{$c-3-ddd};
+    --c-3-dddd: #{$c-3-dddd};
+
+    --c-success: #{$c-success};
+    --c-danger: #{$c-danger};
+    --c-active: #{$c-active};
+    --c-warning: #{$c-warning};
+    --c-disabled: #{$c-disabled};
+    
+}

@@ -1,0 +1,376 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px 32px;
+    border: 1.5px solid var(--c-1);
+    border-radius: 8px;
+
+    background: transparent;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(19/14);
+    color: var(--c-1);
+
+    white-space: nowrap;
+    cursor: pointer;
+
+    @include laptop-big {
+        padding: 10px 17px;
+    }
+
+    @include laptop {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    @include tablet {
+        padding: 7px 10px;
+    }
+
+    &:hover,
+    &:focus {
+        background: var(--c-1);
+
+        color: #fff;
+        transition: all .2s ease;
+    }
+
+    &:active {
+        background: var(--c-1-d);
+        transition: all .2s ease;
+    }
+
+    &_small {
+        padding: 16px 16px;
+        font-size: 14px;
+
+        @include laptop-big {
+            padding: 10px 10px;
+        }
+
+        @include laptop {
+            padding: 5px 10px;
+        }
+
+        @include tablet {
+            padding: 5px 15px;
+        }
+
+        @include phone-big {
+            padding: 8px 12px;
+            font-size: 12px;
+        }
+    }
+
+    &_big {
+        padding: 14px 24px;
+    }
+
+    &_filled {
+        background: var(--c-2);
+
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            background: var(--c-2-d)
+        }
+
+        &:active {
+            background: var(--c-2-dd);
+        }
+    }
+
+    &_alt {
+        color: #fff;
+        border-color: #fff;
+    }
+
+    &_weak {
+        border: 1.5px solid #E5E8E8;
+        color: #001B20;
+
+        @include phone-big {
+            border-color: transparent;
+            justify-content: flex-end;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        &:hover,
+        &:focus {
+            background: transparent;
+
+            color: #001B20;
+
+            transition: all .2s ease;
+        }
+    
+        &:active {
+            background: transparent;
+            transition: all .2s ease;
+        }
+    }
+}
+
+.btn-social {
+
+    @include phone-big {
+        padding: 8px;
+    }
+
+    &__text {
+        @include phone-big {
+            display: none;
+        }
+    }
+
+    &__icon {
+        display: none;
+        
+        @include phone-big {
+            display: block;
+        }
+    }
+
+    &.tg {
+        border: 1.5px solid #53A6DB;
+        background: #fff;
+
+        color: #53A6DB;
+
+        &:hover,
+        &:focus {
+            border: 1.5px solid #53A6DB;
+            background: #53A6DB;
+            
+            color: #fff;
+
+            @include phone-big {
+                background: #fff;
+            }
+        }
+
+        &:active {
+            background: #4792c1;
+            border: 1.5px solid #4792c1;
+
+            color: #fff;
+
+            @include phone-big {
+                background: #fff;
+            }
+        }
+    }
+
+    &.wa {
+        border: 1.5px solid #41C345;
+        background: #fff;
+
+        color: #41C345;
+
+        &:hover,
+        &:focus {
+            border: 1.5px solid #41C345;
+            background: #41C345;
+            
+            color: #fff;
+
+            @include phone-big {
+                background: #fff;
+            }
+        }
+
+        &:active {
+            background: #37ab3b;
+            border: 1.5px solid #37ab3b;
+
+            color: #fff;
+
+            @include phone-big {
+                background: #fff;
+            }
+        }
+    }
+}
+
+
+.btn-close {
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        display: block;
+
+        width: 15px;
+        height: 2px;
+        border-radius: 1px;
+
+        background: #BDC0D3;
+
+        transform: translate(-50%, -50%);
+    }
+
+    span:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+
+.btn-circle {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 160px;
+    height: 160px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+
+    background-color: var(--c-1);
+
+    cursor: pointer;
+    transition: .2s all cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    @include phone-big {
+        width: 117px;
+        height: 117px;
+    }
+
+    &:hover {
+        background-color: var(--c-1);
+
+        &:before {
+            left: -10px;
+            right: -10px;
+            top: -10px;
+            bottom: -10px;
+            background-color: var(--c-1);
+        }
+    }
+
+    &:active {
+        background-color: var(--c-1-dd);
+
+        &:before {
+            left: -10px;
+            right: -10px;
+            top: -10px;
+            bottom: -10px;
+            background-color: var(--c-1-dd);
+        }
+    }
+
+    &:before {
+        content: '';
+
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        z-index: 1;
+
+        display: block;
+
+        border-radius: 100%;
+        background-color: transparent;
+        transition: .2s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &_small {
+        width: 160px;
+        height: 160px;
+
+        @include phone-big {
+            width: 117px;
+            height: 117px;
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 2;
+
+        display: block;
+
+        max-width: 75px;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 135%;
+        color: #FFFFFF;
+        user-select: none;
+
+        @include phone-big {
+            font-size: 14px;
+        }
+    }
+
+    &_white {
+        position: relative;
+
+        background-color: #fff;
+
+        &:focus {
+            border: 1px solid #d2d2d2;
+        }
+    
+        &:hover {
+            background-color: #ffffff;
+
+            &:before {
+                left: -10px;
+                right: -10px;
+                top: -10px;
+                bottom: -10px;
+                background-color: #ffffff;
+            }
+        }
+    
+        &:active {
+            background-color: #d2d2d2;
+        }
+
+        &:before {
+            content: '';
+
+            position: absolute;
+            left: -10px;
+            right: -10px;
+            top: -10px;
+            bottom: -10px;
+            z-index: 1;
+
+            display: block;
+
+            border-radius: 100%;
+            border: 1.5px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .btn-circle__text {
+            color: #008AA4;
+        }
+    }
+}

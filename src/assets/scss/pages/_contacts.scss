@@ -1,0 +1,206 @@
+.page-contacts {
+
+    .hero {
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+
+            margin-top: 24px;
+
+            @include laptop-big {
+                gap: 20px;
+            }
+
+            @include tablet {
+                margin-top: 20px;
+                grid-template-columns: 100%;
+                gap:15px;
+            }
+        }
+    }
+
+
+    .hero-item {
+        padding: 56px;
+        background: #F0F2F4;
+        border-radius: 16px;
+
+        overflow: hidden;
+
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) .15s all;
+
+        @include laptop-big {
+            padding: 46px;
+        }
+
+        @include laptop {
+            padding: 40px;
+        }
+
+        @include tablet {
+            padding: 30px;
+        }
+
+        @include phone-big {
+            padding: 24px;
+        }
+
+        &_bigone {
+            position: relative;
+            grid-column: 1/3;
+
+            padding-bottom: 352px;
+
+            @include laptop {
+                padding-bottom: 250px;
+            }
+
+            @include tablet {
+                grid-column: 1/2;
+            }
+
+            .hero-item__img {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+
+                display: block;
+                
+                width: 100%;
+
+                object-fit: cover;
+
+                @include tablet {
+                    left: -70px;
+                    bottom: unset;
+                    top: -50px;
+                    
+                    width: auto;
+                }
+
+                @include phone-big {
+                    left: -110px;
+                }
+            }
+        }
+
+        &:hover {
+            .hero-item__text {
+                color: #008AA4;
+                transition: cubic-bezier(0.165, 0.84, 0.44, 1) .3s all;
+            }
+        }
+
+        &_link {
+            &:hover {
+                transition: cubic-bezier(0.165, 0.84, 0.44, 1) .3s all;
+
+                .hero-item__title {
+                    color: rgba(255, 255, 255, .5);
+                    transition: cubic-bezier(0.165, 0.84, 0.44, 1) .3s all;
+                }
+
+                .hero-item__text {
+                    color: #fff;
+                    transition: cubic-bezier(0.165, 0.84, 0.44, 1) .3s all;
+                }
+            }
+
+            &_tg {
+                &:hover {
+                    background: #53A6DB;
+                }
+            }
+
+            &_wa {
+                &:hover {
+                    background: #41C345;
+                }
+            }
+
+            &_yt {
+                &:hover {
+                    background: #C4302B;
+                }
+            }
+            &_ig {
+                &:hover {
+                    background: #C13584;
+                }
+            }
+        }
+
+        &__title {
+            position: relative;
+            z-index: 2;
+
+            margin-bottom: 24px;
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 135%;
+            color: #667679;
+
+            transition: cubic-bezier(0.165, 0.84, 0.44, 1) .15s all;
+            user-select: none;
+
+            @include laptop-big {
+                margin-bottom: 20px;
+                font-size: 14px;
+            }
+
+            @include laptop {
+                margin-bottom: 15px;
+            }
+        }
+
+        &__text {
+            position: relative;
+            z-index: 2;
+
+            display: inline-block;
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 135%;
+            color: #001B20;
+
+            cursor: pointer;
+            transition: cubic-bezier(0.165, 0.84, 0.44, 1) .15s all;
+
+            @include laptop-big {
+                font-size: 26px;
+            }
+
+            @include laptop {
+                font-size: 24px;
+            }
+
+            @include phone-big {
+                font-size: 20px;
+            }
+
+            &_small {
+                font-size: 24px;
+
+                @include laptop-big {
+                    font-size: 22px;
+                }
+
+                @include laptop {
+                    font-size: 20px;
+                }
+
+                @include phone-big {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

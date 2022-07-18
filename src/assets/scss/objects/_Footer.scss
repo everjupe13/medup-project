@@ -1,0 +1,239 @@
+.footer {
+
+    margin-top: 60px;
+    padding: 60px 0 60px;
+
+    background: #001B20;
+
+    @include tablet {
+        margin: 0;
+    }
+
+    @include phone-big {
+        margin-top: 40px;
+        padding: 40px 0;
+    }
+
+    &__phone {
+        display: block;
+
+        margin-bottom: 13px;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: calc(44/32);
+        color: #FFFFFF;
+
+        @include phone-big {
+            font-size: 24px;
+        }
+    }
+
+    &__feedback {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        height: 32px;
+        margin-bottom: 40px;
+
+        cursor: pointer;
+
+        &:hover {
+            .footer__feedback-icon {
+                &_current {
+                    display: none;
+                }
+
+                &_hover {
+                    display: block;
+                }
+            }
+
+            .footer__feedback-text {
+                color: #fff;
+            }
+        }
+    }
+
+    &__feedback-icon {
+
+        padding: 7px 4px;
+
+        &_hover {
+            display: none;
+        }
+    }
+
+    &__feedback-text {
+        margin-left: 8px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: calc(19/14);
+        color: #667679;
+    }
+
+    &__wrapper {
+        // display: grid;
+        // grid-template-columns: repeat(3, auto);
+        // column-gap: 120px;
+
+        display: flex;
+
+        margin-bottom: 60px;
+
+        @include laptop-big {
+            margin-bottom: 30px;
+        }
+
+        @include phone-big {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__column {
+        flex-grow: 0;
+
+        max-width: 238px;
+        margin-right: 120px;
+
+        @include phone-big {
+            margin-right: 40px;
+        }
+
+        &:nth-child(1) {
+            @include phone-big {
+                order: 2
+            }
+        }
+
+        &:nth-child(2) {
+            @include phone-big {
+                order: 3
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            @include phone-big {
+                order: 1;
+                flex-grow: 1;
+
+                width: 100%;
+                max-width: none;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &__nav-header {
+        margin-bottom: 11px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 135%;
+        color: #FFFFFF;
+    }
+
+    &__nav-item {
+        margin-bottom: 6px;
+        padding: 5px 0;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: calc(19/14);
+        color: #FFFFFF;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a,
+        p {
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            font-weight: inherit;
+            font-style: inherit
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+
+            &:active {
+                color: #dadada;
+            }
+        }
+    }
+
+    &__moreover {
+        display: flex;
+        align-items: center;
+
+        &__text {
+            margin-left: 16px;
+
+            font-family: 'Gotham', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: calc(17/14);
+            color: #FFFFFF;
+
+            @include phone-big {
+                font-size: 9px;
+            }
+        }
+    }
+
+    &__btn-up {
+        position: absolute;
+        right: 0;
+        top: -20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 104px;
+        height: 104px;
+
+        @include phone-big {
+            display: none;
+        }
+
+        &:hover {
+            .footer__btn-up-img {
+                display: none;
+
+                &_hover {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__btn-up-img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        &_hover {
+            display: none;
+
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

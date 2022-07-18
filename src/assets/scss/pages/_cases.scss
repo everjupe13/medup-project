@@ -1,0 +1,163 @@
+.page-cases {
+
+    .hero__text {
+        margin-top: 32px;
+
+        max-width: 784px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 135%;
+        color: #001B20;
+
+        @include laptop-big {
+            margin-top: 25px;
+            font-size: 20px;
+            max-width: 600px;
+        }
+
+        @include tablet {
+            font-size: 18px;
+        }
+
+        @include phone-big {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        &_colored {
+            color: #008AA4;
+        }
+    }
+
+    .plitka {
+
+        padding-top: 0;
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 400px;
+            gap: 25px;
+
+            @include phone-big {
+                grid-template-columns: 100%;
+                grid-auto-rows: 462px;
+            }
+        }
+
+        &__item {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+
+            padding: 56px;
+
+            @include laptop-big {
+                padding: 40px
+            }
+
+            @include laptop {
+                padding: 30px;
+            }
+
+            @include phone-big {
+                padding: 24px;
+            }
+
+            &:hover {
+                .plitka {
+                    &__glass:before {
+                        background: var(--c-2);
+                        transition: .3s all cubic-bezier(0.165, 0.84, 0.44, 1);
+                    }
+                }
+            }
+        }
+
+        &__title {
+            margin-bottom: 201px;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 135%;
+            color: #FFFFFF;
+            position: relative;
+            z-index: 2;
+
+            @include laptop-big {
+                font-size: 28px;
+            }
+
+            @include laptop {
+                font-size: 24px;
+            }
+
+            @include tablet {
+                margin-bottom: 40px;
+            }
+
+            @include phone-big {
+                font-size: 24px;
+            }
+        }
+
+        &__text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FFFFFF;
+            position: relative;
+            z-index: 2;
+
+            @include laptop-big {
+                font-size: 18px;
+            }
+
+            @include laptop {
+                font-size: 16px;
+            }
+
+            @include phone-big {
+                font-size: 16px;
+            }
+        }
+
+        &__glass {
+            position: absolute;
+            z-index: 1;
+
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            &:before {
+                content: '';
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                z-index: 1;
+
+                background: linear-gradient(0deg, rgba(0, 27, 32, 0.5), rgba(0, 27, 32, 0.5));
+                transition: .15s all cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+        }
+
+        &__img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+}

@@ -1,0 +1,78 @@
+
+.card-number {
+
+    &__number {
+        margin-bottom: 40px;
+
+        @include phone-big {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__number-text {
+        background: linear-gradient(180deg, #5BE5FF -41.84%, #008AA4 150.66%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+
+        font-size: 122px;
+        font-weight: normal;
+        line-height: 100%;
+
+        @include laptop-big {
+            font-size: 100px;
+        }
+
+        @include laptop {
+            font-size: 90px;
+        }
+
+        @include tablet {
+            font-size: 85px;
+        }
+
+        @include phone-big {
+            margin-bottom: 20px;
+            font-size: 78px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 16px;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 135%;
+        color: #001B20;
+
+        @include laptop-big {
+            font-size: 22px;
+        }
+
+        @include phone-big {
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 135%;
+        color: #667679;
+
+        @include laptop-big {
+            font-size: 14px;
+        }
+
+        @include tablet {
+            font-size: 12px;
+        }
+
+        @include phone-big {
+            font-size: 14px;
+        }
+    }
+}
