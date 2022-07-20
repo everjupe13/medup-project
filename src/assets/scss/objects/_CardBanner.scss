@@ -60,13 +60,13 @@
         align-items: center;
 
         width: 166px;
-        margin-top: 10px;
+        margin-top: 6px;
         margin-right: 16px;
 
         @include phone-big {
             width: 85px;
             margin-right: 8px;
-            margin-top: 8px;
+            margin-top: 5px;
         }
     }
 
@@ -159,7 +159,7 @@
             right: 0;
             bottom: 0;
             height: auto;
-            
+
             width: 130%;
         }
     }
@@ -232,11 +232,39 @@
         user-select: none;
     }
 
+    &__timer {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 16px;
+    }
+
+    &__timer-icon {
+        display: block;
+        flex-shrink: 0;
+
+        margin-right: 8px;
+    }
+
+    &__timer-text {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1;
+        color: #FFFFFF;
+    }
+
     // gallery section
     &_gallery {
-
         height: 100%;
         min-height: 400px;
+
+        @include phone-big {
+            display: flex;
+            flex-direction: column;
+
+            padding-top: 24px;
+        }
 
         &:hover {
             .card-banner__background {
@@ -254,6 +282,15 @@
 
             &__body {
                 margin-top: 90px;
+
+                @include phone-big {
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+
+                    margin-top: 20px;
+
+                }
             }
 
             &__background {
@@ -273,6 +310,13 @@
                     opacity: 0.5;
 
                     transition: .3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                }
+            }
+
+            &__link {
+                @include phone-big {
+                    display: block;
+                    margin-top: auto;
                 }
             }
         }
@@ -298,17 +342,17 @@
         &:hover {
             background-color: #008AA4;
             transition: .4s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    
+
             .card-banner {
-    
+
                 &__link-img {
                     display: none;
-    
+
                     &_hover {
                         display: block;
                     }
                 }
-    
+
                 &__back-img {
                     &_hover {
                         opacity: 1;
@@ -323,7 +367,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-    
+
             max-width: 464px;
             margin-top: 0;
             margin-left: auto;
@@ -339,7 +383,7 @@
                 flex-direction: column
             }
         }
-    
+
         .card-banner__btn {
             margin-top: 70px;
 

@@ -217,6 +217,15 @@ module.exports = {
             },
             chunks: ['main'],
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/academy.html`,
+            filename: './academy.html',
+            minify: {
+                collapseWhitespace: false,
+                removeComments: true,
+            },
+            chunks: ['main'],
+        }),
         // new HtmlWebpackPlugin({
         //     template: `${PAGES_DIR}/name.html`,
         //     filename: './name.html',
