@@ -8,8 +8,31 @@ import './assets/scss/main.scss';
 
 
 
+// Dropdown list
+window.addEventListener('load', () => {
+    const faqItems = document.querySelectorAll('.page-academy .drop-list__item')
 
-// adaptive logos
+    if (faqItems) {
+        faqItems.forEach((item) => {
+            let heightBody = item.children[1].children[0].offsetHeight
+    
+            item.style.setProperty('--innerHeight', `${heightBody}px`)
+    
+            item.children[0].addEventListener('click', () => {
+                item.classList.toggle('open');
+                if (item.classList.contains('open')) {
+                    item.children[1].style.height = `${heightBody}px`
+                } else {
+                    item.children[1].style.height = '0px'
+                }
+            })
+        })
+    }
+
+
+})
+
+
 window.addEventListener('load', () => {
 
     const logos = document.querySelectorAll('.page-main .logos .logos__img')
@@ -48,6 +71,22 @@ window.addEventListener('load', () => {
             }
         }
 
+        const academyCards = (state = true) => {
+            const grid = document.querySelector('.page-academy .choice__grid')
+
+            if (grid) {
+                if (state === 'desktop') {
+                    grid.style.height = 'auto'
+                    let h = grid.getBoundingClientRect().height;
+                    grid.style.height = (parseInt(h, 10) + 80) + 'px'; 
+                    return true
+
+                } else if (state === 'mobile') {
+                    grid.style.height = 'auto'
+                }
+            }
+        }
+
         if (arg === 'mobile') {
 
             logos.forEach((el) => {
@@ -57,6 +96,7 @@ window.addEventListener('load', () => {
             })
 
             gridformUpdate('mobile')
+            academyCards('mobile')
 
             return true
         }
@@ -81,6 +121,7 @@ window.addEventListener('load', () => {
             })
 
             gridformUpdate('desktop')
+            academyCards('desktop')
 
             return true
         }

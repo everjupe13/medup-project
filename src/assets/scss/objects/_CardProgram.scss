@@ -1,0 +1,324 @@
+.card-program {
+
+    position: relative;
+
+    padding: 56px;
+    border-radius: 16px;
+    transition: .15s cubic-bezier(0.165, 0.84, 0.44, 1) all;
+
+    @include laptop-big {
+        padding: 40px;
+    }
+
+    @include phone-big {
+        padding: 24px;
+    }
+
+    &:hover {
+
+        padding-top: 16px;
+        transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) all;
+
+        @include laptop-big {
+            padding-top: 0px;
+        }
+
+        &::before {
+            top: -40px;
+            bottom: -40px;
+
+            background-color: #FC8B2A;
+            box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
+
+            transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) all;
+
+            @include phone-big {
+                top: 0;
+                bottom: 0;
+            }
+        }
+
+        .card-program {
+            &__title {
+                font-size: 54px;
+                transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) all;
+
+                @include laptop-big {
+                    font-size: 48px;
+                }
+
+                @include phone-big {
+                    font-size: 40px;
+                }
+            }
+
+            &__subheader {
+                color: #fff;
+                font-size: 24px;
+                transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) all;
+
+                @include laptop-big {
+                    font-size: 20px;
+                }
+
+                @include phone-big {
+                    font-size: 20px;
+                }
+            }
+
+            &__list-item {
+                color: rgba(0, 27, 32, .5);
+                font-size: 16px;
+                transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) all;
+
+                @include laptop-big {
+                    font-size: 14px;
+                }
+
+                @include phone-big {
+                    font-size: 14px;
+                }
+
+                &.active {
+                    color: #fff;
+                    opacity: 1;
+                }
+            }
+
+            &__month {
+                font-size: 32px;
+                transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) all;
+
+                @include laptop-big {
+                    font-size: 28px;
+                }
+
+                @include phone-big {
+                    font-size: 24px;
+                }
+            }
+
+            &__cost {
+                font-size: 40px;
+                transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) all;
+
+                @include phone-big {
+                    font-size: 32px;
+                }
+            }
+
+            &__m-row {
+
+                span:not(.active) {
+                    background: #F0F2F4;
+                    transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) all;
+                }
+            }
+
+            &__btn {
+                background: #FFFFFF;
+                border: 1.5px solid #fff;
+                color: #008AA4;
+
+                transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) all;
+
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        display: block;
+        border-radius: 16px;
+
+        background-color: #F0F2F4;
+
+        transition: .15s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 46px;
+        line-height: 135%;
+        color: #001B20;
+
+        transition: .15s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+
+        @include laptop-big {
+            font-size: 40px;
+        }
+
+        @include phone-big {
+            font-size: 40px;
+        }
+    }
+
+    &__body {
+        margin-top: 28px;
+
+        @include laptop-big {
+            margin-top: 20px;
+        }
+    }
+
+    &__block {
+        margin-top: 32px;
+
+        @include laptop-big {
+            margin-top: 20px;
+        }
+    }
+
+    &__subheader {
+        margin-bottom: 8px;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 135%;
+        color: #001B20;
+
+        transition: .15s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+
+        @include phone-big {
+            font-size: 20px;
+        }
+    }
+
+    &__month {
+        margin-bottom: 8px;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 135%;
+        color: #001B20;
+
+        transition: .15s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+
+        @include phone-big {
+            font-size: 24px;
+        }
+    }
+
+    &__m-row {
+        display: flex;
+        column-gap: 4px;
+
+        @include phone-big {
+            width: max-content
+        }
+
+        span {
+            display: block;
+
+            width: 19px;
+            height: 8px;
+            border-radius: 8px;
+
+            background: #B2BABC;
+
+            transition: .15s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+
+            &.active {
+                background: #001B20;
+            }
+        }
+    }
+
+    &__list {
+        margin-top: 18px;
+
+        @include laptop-big {
+            margin-top: 10px;
+        }
+    }
+
+    &__list-item {
+        margin-bottom: 10px;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: calc(19/14);
+        color: #B2BABC;
+
+        transition: .15s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+
+        @include laptop-big {
+            margin-bottom: 7px;
+        }
+
+        @include phone-big {
+            font-size: 14px;
+        }
+
+        &.active {
+            color: #001B20;
+
+            &:after {
+                content: '';
+
+                // position: absolute;
+                // top: 2px;
+                // right: -28px;
+
+                display: inline-block;
+
+                width: 19px;
+                height: 13px;
+                margin-left: 8px;
+
+
+                background: url('/assets/img/checkmark.svg') center center/cover no-repeat;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__cost {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 135%;
+        color: #001B20;
+
+        transition: .15s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+
+
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 24px;
+    }
+
+    &__btn {
+        color: #001B20;
+        border: 1.5px solid #001B20;
+
+        transition: .15s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+
+        @include phone-big {
+            width: 100%;
+            padding: 16px 20px;
+        }
+    }
+}

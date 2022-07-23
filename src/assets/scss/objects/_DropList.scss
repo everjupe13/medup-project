@@ -1,0 +1,304 @@
+.drop-list {
+
+    &__item {
+        margin-bottom: 24px;
+        border-radius: 16px;
+
+        background: #FFFFFF;
+        -webkit-tap-highlight-color: transparent;
+
+        --innerHeight: 0px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include laptop-big {
+            margin-bottom: 20px;
+        }
+
+        @include tablet {
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        &.open {
+            .drop-list {
+                &__state-img {
+                    display: none;
+
+                    &_active {
+                        display: block;
+                    }
+                }
+
+                &__title {
+                    color: #008AA4;
+                }
+
+                &__body {
+                    height: var(--innerHeight);
+                }
+            }
+        }
+    }
+
+    &__case {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 15px;
+
+        padding: 28px 56px;
+
+        cursor: pointer;
+        user-select: none;
+
+        @include laptop-big {
+            padding: 18px 45px;
+        }
+
+        @include tablet {
+            padding: 13px 35px;
+        }
+
+        @include phone-big {
+            column-gap: 24px;
+            padding: 24px;
+        }
+    }
+
+    &__case-body {
+        @include phone-big {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        padding: 24px 0;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.35;
+        color: #0D1238;
+
+        transition: color .2s;
+
+        @include laptop-big {
+            font-size: 18px;
+            padding: 15px 0;
+        }
+
+        @include tablet {
+            font-size: 18px;
+        }
+
+        @include phone-big {
+            padding: 0;
+            font-size: 16px;
+        }
+    }
+
+    &__state {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+    }
+
+    &__state-img {
+        display: block;
+
+        @include laptop-big {
+            width: 65px;
+            height: 65px;
+        }
+
+        @include phone-big {
+            width: 56px;
+            height: 56px;
+        }
+
+        &_active {
+            display: none;
+
+            @include laptop-big {
+                width: 65px;
+                height: 65px;
+            }
+
+            @include phone-big {
+                width: 56px;
+                height: 56px;
+            }
+        }
+    }
+
+    &__body {
+        height: 0;
+        overflow: hidden;
+
+        transition: height .3s;
+    }
+
+    &__body-inner {
+        padding: 56px;
+        padding-top: 12px;
+        padding-bottom: 28px;
+
+        @include laptop-big {
+            padding: 45px;
+            padding-top: 3px;
+        }
+
+        @include tablet {
+            padding: 35px;
+            padding-top: 5px;
+        }
+
+        @include phone-big {
+            padding: 24px;
+            padding-top: 15px;
+        }
+    }
+
+    &__block {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__subheader {
+        margin-bottom: 16px;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 135%;
+        color: #001B20;
+
+        @include laptop-big {
+            margin-bottom: 10px;
+
+            font-size: 16px;
+        }
+
+        @include phone-big {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__list-item {
+        margin-bottom: 8px;
+        padding: 16px 32px;
+        border: 2px solid #E5F3F5;
+        border-radius: 8px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1;
+        color: #001B20;
+
+        @include laptop-big {
+            padding: 13px 28px;
+            font-size: 14px;
+        }
+
+        @include phone-big {
+            padding: 8px 16px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__month {
+        margin-bottom: 16px;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 135%;
+        color: #008AA4;
+
+        @include laptop-big {
+            margin-bottom: 10px;
+
+            font-size: 28px;
+        }
+
+        @include phone-big {
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+    }
+
+    &__m-row {
+        display: flex;
+        column-gap: 4px;
+
+        span {
+            flex-grow: 1;
+            display: block;
+
+            height: 8px;
+            border-radius: 8px;
+
+            background: #F0F2F4;
+
+            @include laptop-big {
+                height: 5px;
+            }
+
+            @include phone-big {
+                height: 8px;
+            }
+
+            &.active {
+                background: #008AA4;
+            }
+        }
+    }
+
+    &__cost {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 135%;
+        color: #008AA4;
+
+        @include laptop-big {
+            font-size: 30px;
+        }
+
+        @include phone-big {
+            font-size: 32px;
+        }
+    }
+
+    &__btn-wrapper {
+        display: flex;
+        justify-content: flex-end;
+
+        @include phone-big {
+            margin-top: 40px;
+        }
+    }
+
+    &__btn {
+        color: #008AA4;
+        border: 1.5px solid #008AA4;
+
+        @include phone-big {
+            padding: 16px 32px;
+        }
+    }
+}
