@@ -14,7 +14,7 @@
         padding: 24px;
     }
 
-    &:hover {
+    &_best {
 
         padding-top: 16px;
         transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) all;
@@ -23,7 +23,7 @@
             padding-top: 0px;
         }
 
-        &::before {
+        &.card-program::before {
             top: -40px;
             bottom: -40px;
 

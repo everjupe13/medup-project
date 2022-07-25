@@ -32,7 +32,8 @@ module.exports = {
         // name: `${PATHS.src}/name.js`,
     },
     output: {
-        filename: `${PATHS.assets}js/[name].[contenthash].js`,
+        // filename: `${PATHS.assets}js/[name].[contenthash].js`,
+        filename: `${PATHS.assets}js/[name].js`,
         path: PATHS.dist,
         // publicPath: './' // for production (relative path about document)
         publicPath: '/' // for development (absolute path from root server)
@@ -149,7 +150,8 @@ module.exports = {
         // Vue loader
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
-            filename: `${PATHS.assets}css/[name].[contenthash].css`,
+            // filename: `${PATHS.assets}css/[name].[contenthash].css`,
+            filename: `${PATHS.assets}css/[name].css`,
         }),
         new CopyWebpackPlugin({
             patterns: [
